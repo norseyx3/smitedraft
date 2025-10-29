@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>smitedraft</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 2rem; }
+    .notice { color: #555; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>smitedraft</h1>
+  <p>This is the web entry for the repository. Replace or expand this page as needed.</p>
+
+  <!-- If your main JS file is named differently, update the src below (e.g., main.js, index.js) -->
+  <script>
+    // A tiny convenience: if you have an external app script at ./app.js, it'll run.
+    // Otherwise, you can paste your client-side code here or change the src to your file.
+    (function tryLoadExternal() {
+      var s = document.createElement('script');
+      s.src = './app.js';
+      s.onload = function(){ console.log('Loaded app.js'); };
+      s.onerror = function(){ console.log('app.js not found — remove or update <script> to match your file.'); };
+      document.head.appendChild(s);
+    })();
+  </script>
+
+  <div class="notice">
+    If your project is a single-page app using client-side routing, create a 404.html that redirects to index.html (or configure your host).
+  </div>
+</body>
+</html>
