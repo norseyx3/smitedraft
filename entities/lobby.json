@@ -1,0 +1,78 @@
+{
+  "name": "Lobby",
+  "type": "object",
+  "properties": {
+    "lobby_id": {
+      "type": "string",
+      "description": "Unique identifier for the lobby"
+    },
+    "current_phase": {
+      "type": "string",
+      "enum": [
+        "bans",
+        "picks",
+        "complete"
+      ],
+      "default": "bans",
+      "description": "Current draft phase"
+    },
+    "current_turn": {
+      "type": "integer",
+      "default": 0,
+      "description": "Current turn index in draft order"
+    },
+    "turn_start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the current turn started"
+    },
+    "team1_picks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Team 1 god picks"
+    },
+    "team2_picks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Team 2 god picks"
+    },
+    "team1_bans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Team 1 god bans"
+    },
+    "team2_bans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Team 2 god bans"
+    },
+    "draft_complete": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether draft is finished"
+    },
+    "team1_name": {
+      "type": "string",
+      "default": "Order Side"
+    },
+    "team2_name": {
+      "type": "string",
+      "default": "Chaos Side"
+    }
+  },
+  "required": [
+    "lobby_id"
+  ]
+}
